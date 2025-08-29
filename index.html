@@ -17,22 +17,21 @@
 <body class="w-[1900px] bg-[#f5fff6] mx-auto">
     <!-- nav bar -->
     <div class="parent-div justify-between flex w-full h-[100px] px-[60px] py-6 bg-white">
-        <div class="flex items-center gap-2">
-            <img src="assets/logo.png" class="w-[50px] h-[50px]" alt="">
+        <div class="flex items-center gap-2"> <img src="assets/logo.png" class="w-[50px] h-[50px]" alt="">
             <h1 class="text-xl text-[#006747] font-extrabold">Emergency <br>Service</h1>
         </div>
         <div class=" flex items-center gap-3">
             <div class="flex bg-[#41ff6b1a] w-[123px] h-[52px] rounded-[50px] items-center justify-center gap-2">
-                <h1 class="text-lg font-black text-center">0</h1>
-                <img src="assets/heart.png" class="w-[30px] h-[30px]" alt="">
+                <h1 id="heartCount" class="text-lg font-black text-center">0</h1> <img src="assets/heart.png" class="w-[30px] h-[30px]"
+                    alt="">
             </div>
             <div class="flex bg-[#41ff6b1a] w-[123px] h-[52px] rounded-[50px] items-center justify-center gap-2">
-                <h1 class="text-lg font-black text-center">100</h1>
-                <img src="assets/coin.png" class="w-[30px] h-[30px]" alt="">
+                <h1 id="coinCount" class="text-lg font-black text-center">100</h1> <img src="assets/coin.png" class="w-[30px] h-[30px]"
+                    alt="">
             </div>
             <div
                 class="flex bg-[#00a63e] w-[127px] h-[52px] rounded-[50px] px-9 py-3 items-center justify-center gap-2">
-                <h1 class="text-base font-black text-center text-white">2</h1>
+                <h1 id="copyCount" class="text-base font-black text-center text-white">0</h1>
                 <h1 class="text-base font-black text-white">Copy</h1>
             </div>
         </div>
@@ -46,64 +45,363 @@
         <p class="text-white text-center mt-4">Government Emergency Services at Your Fingertip – A Project by Government
             of the People’s Republic of Bangladesh</p>
     </div>
-    <div class="flex gap-6 mt-10">
+    <div class="flex gap-3 mt-10">
         <!-- Left side: Cards -->
-        <div class="ml-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
-            <!-- Example card -->
-            <div class="w-[436px] h-[360px] bg-white rounded-xl shadow-md p-4 flex flex-col space-y-3 border">
+        <div class="ml-10 mb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1">
+            <!-- 1st card -->
+            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
                 <!-- Icon -->
-                 <div class="flex justify-between">
-                <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
-                    <img src="assets/emergency.png" class="w-8 h-8" alt="">
-                </div>
-                <div class="mr-4 mt-4"><i class="fa-regular fa-heart fa-xl"></i></div>
+                <div class="flex justify-between">
+                    <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
+                        <img src="assets/emergency.png" class="w-8 h-8" alt="">
+                    </div>
+                    <div class="mr-4 mt-4"><i class="fa-regular fa-heart fa-xl"></i></div>
                 </div>
 
                 <!-- Title + Subtitle -->
                 <div>
                     <h2 class="text-2xl font-bold">National Emergency Number</h2>
-                    <p class="text-lg font-normal text-gray-600">National Emergency</p>
+                    <p class="service-name text-lg font-normal text-gray-600">National Emergency</p>
                 </div>
 
                 <!-- Big Number -->
-                <h1 class="text-3xl font-bold">999</h1>
+                <h1 class="service-number text-3xl font-bold">999</h1>
 
                 <!-- Tag -->
-                <p class="w-[53px] h-[37px] flex items-center justify-center text-lg text-gray-500 rounded-full bg-gray-100 px-3 py-1">
-                    All
-                </p>
+                <p
+                    class="w-fit flex items-center justify-center text-lg text-gray-500 rounded-full bg-gray-100 px-3 py-1">
+                    All</p>
 
                 <!-- Buttons -->
-                <div class="flex items-center justify-between space-x-2">
-                    <button class="flex-1 border rounded-lg py-2 text-sm hover:bg-gray-100">
+                <div class="mt-6 mr-8 flex items-center justify-between space-x-2">
+                    <button
+                        class="copyBtn flex-1 border rounded-lg py-2 text-base font-normal text-gray-700 hover:bg-gray-200"><i
+                            class="fa-solid fa-copy"></i>
                         Copy
                     </button>
-                    <button class="flex-1 bg-green-600 text-white rounded-lg py-2 text-sm hover:bg-green-700">
+                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                            class="fa-solid fa-phone"></i>
                         Call
                     </button>
                 </div>
             </div>
+            <!-- 2nd card -->
+            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+                <!-- Icon -->
+                <div class="flex justify-between">
+                    <div class="w-[60px] h-[60px] rounded-2xl bg-[#dfefff] flex items-center justify-center">
+                        <img src="assets/police.png" class="w-8 h-8" alt="">
+                    </div>
+                    <div class="mr-4 mt-4"><i class="fa-regular fa-heart fa-xl"></i></div>
+                </div>
 
-            <!-- Copy above card for Police, Fire Service, etc. -->
+                <!-- Title + Subtitle -->
+                <div>
+                    <h2 class="text-2xl font-bold">Police Helpline Number</h2>
+                    <p class="service-name text-lg font-normal text-gray-600">Police</p>
+                </div>
+
+                <!-- Big Number -->
+                <h1 class="service-number text-3xl font-bold">999</h1>
+
+                <!-- Tag -->
+                <p
+                    class="w-fit flex items-center justify-center text-lg text-gray-500 rounded-full bg-gray-100 px-3 py-1">
+                    Police</p>
+
+                <!-- Buttons -->
+                <div class="mt-6 mr-8 flex items-center justify-between space-x-2">
+                    <button
+                        class="copyBtn flex-1 border rounded-lg py-2 text-base font-normal text-gray-700 hover:bg-gray-200"><i
+                            class="fa-solid fa-copy"></i>
+                        Copy
+                    </button>
+                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                            class="fa-solid fa-phone"></i>
+                        Call
+                    </button>
+                </div>
+            </div>
+            <!-- 3rd card -->
+            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+                <!-- Icon -->
+                <div class="flex justify-between">
+                    <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
+                        <img src="assets/fire-service.png" class="w-8 h-8" alt="">
+                    </div>
+                    <div class="mr-4 mt-4"><i class="fa-regular fa-heart fa-xl"></i></div>
+                </div>
+
+                <!-- Title + Subtitle -->
+                <div>
+                    <h2 class="text-2xl font-bold">Fire Service Number</h2>
+                    <p class="service-name text-lg font-normal text-gray-600">Fire Service</p>
+                </div>
+
+                <!-- Big Number -->
+                <h1 class="service-number text-3xl font-bold">999</h1>
+
+                <!-- Tag -->
+                <p
+                    class="w-fit flex items-center justify-center text-lg text-gray-500 rounded-full bg-gray-100 px-3 py-1">
+                    Fire</p>
+
+                <!-- Buttons -->
+                <div class="mt-6 mr-8 flex items-center justify-between space-x-2">
+                    <button
+                        class="copyBtn flex-1 border rounded-lg py-2 text-base font-normal text-gray-700 hover:bg-gray-200"><i
+                            class="fa-solid fa-copy"></i>
+                        Copy
+                    </button>
+                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                            class="fa-solid fa-phone"></i>
+                        Call
+                    </button>
+                </div>
+            </div>
+            <!-- 4th card -->
+            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+                <!-- Icon -->
+                <div class="flex justify-between">
+                    <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
+                        <img src="assets/ambulance.png" class="w-8 h-8" alt="">
+                    </div>
+                    <div class="mr-4 mt-4"><i class="fa-regular fa-heart fa-xl"></i></div>
+                </div>
+
+                <!-- Title + Subtitle -->
+                <div>
+                    <h2 class="service-name text-2xl font-bold">Amblulance Service</h2>
+                    <p class="text-lg font-normal text-gray-600">Ambulance</p>
+                </div>
+
+                <!-- Big Number -->
+                <h1 class="service-number text-3xl font-bold">1994-999999</h1>
+
+                <!-- Tag -->
+                <p
+                    class="w-fit flex items-center justify-center text-lg text-gray-500 rounded-full bg-gray-100 px-3 py-1">
+                    Health</p>
+
+                <!-- Buttons -->
+                <div class="mt-6 mr-8 flex items-center justify-between space-x-2">
+                    <button
+                        class="copyBtn flex-1 border rounded-lg py-2 text-base font-normal text-gray-700 hover:bg-gray-200"><i
+                            class="fa-solid fa-copy"></i>
+                        Copy
+                    </button>
+                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                            class="fa-solid fa-phone"></i>
+                        Call
+                    </button>
+                </div>
+            </div>
+            <!-- 5th card -->
+            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+                <!-- Icon -->
+                <div class="flex justify-between">
+                    <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
+                        <img src="assets/emergency.png" class="w-8 h-8" alt="">
+                    </div>
+                    <div class="mr-4 mt-4"><i class="fa-regular fa-heart fa-xl"></i></div>
+                </div>
+
+                <!-- Title + Subtitle -->
+                <div>
+                    <h2 class="service-name text-2xl font-bold">Women & Child Helpline</h2>
+                    <p class="text-lg font-normal text-gray-600">Women & Child Helpline</p>
+                </div>
+
+                <!-- Big Number -->
+                <h1 class="service-number text-3xl font-bold">109</h1>
+
+                <!-- Tag -->
+                <p
+                    class="w-fit flex items-center justify-center text-lg text-gray-500 rounded-full bg-gray-100 px-3 py-1">
+                    Help</p>
+
+                <!-- Buttons -->
+                <div class="mt-6 mr-8 flex items-center justify-between space-x-2">
+                    <button
+                        class="copyBtn flex-1 border rounded-lg py-2 text-base font-normal text-gray-700 hover:bg-gray-200"><i
+                            class="fa-solid fa-copy"></i>
+                        Copy
+                    </button>
+                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                            class="fa-solid fa-phone"></i>
+                        Call
+                    </button>
+                </div>
+            </div>
+            <!-- 6th card -->
+            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+                <!-- Icon -->
+                <div class="flex justify-between">
+                    <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
+                        <img src="assets/emergency.png" class="w-8 h-8" alt="">
+                    </div>
+                    <div class="mr-4 mt-4"><i class="fa-regular fa-heart fa-xl"></i></div>
+                </div>
+
+                <!-- Title + Subtitle -->
+                <div>
+                    <h2 class="service-name text-2xl font-bold">Anti-Corruption Helpline</h2>
+                    <p class="text-lg font-normal text-gray-600">Anti-Corruption</p>
+                </div>
+
+                <!-- Big Number -->
+                <h1 class="service-number text-3xl font-bold">106</h1>
+
+                <!-- Tag -->
+                <p
+                    class="w-fit flex items-center justify-center text-lg text-gray-500 rounded-full bg-gray-100 px-3 py-1">
+                    Govt.</p>
+
+                <!-- Buttons -->
+                <div class="mt-6 flex items-center justify-between space-x-2 mr-8">
+                    <button
+                        class="copyBtn flex-1 border rounded-lg py-2 text-base font-normal text-gray-700 hover:bg-gray-200"><i
+                            class="fa-solid fa-copy"></i>
+                        Copy
+                    </button>
+                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                            class="fa-solid fa-phone"></i>
+                        Call
+                    </button>
+                </div>
+            </div>
+            <!-- 7th card -->
+            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+                <!-- Icon -->
+                <div class="flex justify-between">
+                    <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
+                        <img src="assets/emergency.png" class="w-8 h-8" alt="">
+                    </div>
+                    <div class="mr-4 mt-4"><i class="fa-regular fa-heart fa-xl"></i></div>
+                </div>
+
+                <!-- Title + Subtitle -->
+                <div>
+                    <h2 class="service-name text-2xl font-bold">Electricity Helpline</h2>
+                    <p class="text-lg font-normal text-gray-600">Electricity Outage</p>
+                </div>
+
+                <!-- Big Number -->
+                <h1 class="service-number text-3xl font-bold">16216</h1>
+
+                <!-- Tag -->
+                <p
+                    class="w-fit flex items-center justify-center text-lg text-gray-500 rounded-full bg-gray-100 px-3 py-1">
+                    Electricity</p>
+
+                <!-- Buttons -->
+                <div class="mt-6 mr-8 flex items-center justify-between space-x-2">
+                    <button
+                        class="copyBtn flex-1 border rounded-lg py-2 text-base font-normal text-gray-700 hover:bg-gray-200"><i
+                            class="fa-solid fa-copy"></i>
+                        Copy
+                    </button>
+                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                            class="fa-solid fa-phone"></i>
+                        Call
+                    </button>
+                </div>
+            </div>
+            <!-- 8th card -->
+            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+                <!-- Icon -->
+                <div class="flex justify-between">
+                    <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
+                        <img src="assets/brac.png" class="w-8 h-8" alt="">
+                    </div>
+                    <div class="mr-4 mt-4"><i class="fa-regular fa-heart fa-xl"></i></div>
+                </div>
+
+                <!-- Title + Subtitle -->
+                <div>
+                    <h2 class="service-name text-2xl font-bold">Brac Helpline</h2>
+                    <p class="text-lg font-normal text-gray-600">Brac</p>
+                </div>
+
+                <!-- Big Number -->
+                <h1 class="service-number text-3xl font-bold">16445</h1>
+
+                <!-- Tag -->
+                <p
+                    class="w-fit flex items-center justify-center text-lg text-gray-500 rounded-full bg-gray-100 px-3 py-1">
+                    NGO</p>
+
+                <!-- Buttons -->
+                <div class="mt-6 mr-8 flex items-center justify-between space-x-2">
+                    <button
+                        class="copyBtn flex-1 border rounded-lg py-2 text-base font-normal text-gray-700 hover:bg-gray-200"><i
+                            class="fa-solid fa-copy"></i>
+                        Copy
+                    </button>
+                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                            class="fa-solid fa-phone"></i>
+                        Call
+                    </button>
+                </div>
+            </div>
+            <!-- 9th card -->
+            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+                <!-- Icon -->
+                <div class="flex justify-between">
+                    <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
+                        <img src="assets/Bangladesh-Railway.png" class="w-8 h-8" alt="">
+                    </div>
+                    <div class="mr-4 mt-4"><i class="fa-regular fa-heart fa-xl"></i></div>
+                </div>
+
+                <!-- Title + Subtitle -->
+                <div>
+                    <h2 class="service-name text-2xl font-bold">Bangladesh Railway Helpline </h2>
+                    <p class="text-lg font-normal text-gray-600">Bangladesh Railway</p>
+                </div>
+
+                <!-- Big Number -->
+                <h1 class="service-number text-3xl font-bold">163</h1>
+
+                <!-- Tag -->
+                <p
+                    class="w-fit flex items-center justify-center text-lg text-gray-500 rounded-full bg-gray-100 px-3 py-1">
+                    Travel</p>
+
+                <!-- Buttons -->
+                <div class="mt-6 mr-8 flex items-center justify-between space-x-2">
+                    <button
+                        class="copyBtn flex-1 border rounded-lg py-2 text-base font-normal text-gray-700 hover:bg-gray-200"><i
+                            class="fa-solid fa-copy"></i>
+                        Copy
+                    </button>
+                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                            class="fa-solid fa-phone"></i>
+                        Call
+                    </button>
+                </div>
+            </div>
         </div>
 
         <!-- Right side: Call History -->
-        <div class="w-[400px] h-[1140px] bg-white rounded-xl shadow-md border p-4 flex flex-col">
+        <div class="w-[400px] h-[1115px] bg-white rounded-xl shadow-md p-6 mr-8 flex flex-col">
             <!-- Header -->
             <div class="flex items-center justify-between mb-4">
-                <h2 class="font-semibold text-lg">Call History</h2>
-                <button class="text-sm text-white bg-green-600 px-3 py-1 rounded-md hover:bg-green-700">
+                <h2 class="font-normal text-xl text-[#111111]"><i class="fa-regular fa-clock"></i> Call History</h2>
+                <div class="flex flex-col space-y-3 overflow-y-auto" id="callHistory"></div>
+                <button id="clearHistory"
+                    class="w-[114px] h-[52px] text-base font-semibold text-white bg-green-600 px-3 py-1 rounded-[50px] hover:bg-green-700">
                     Clear
                 </button>
             </div>
 
             <!-- Call history list -->
             <div class="flex flex-col space-y-3 overflow-y-auto">
-                <div class="flex justify-between text-sm border-b pb-2">
+                <div class="flex justify-between text-sm pb-2">
+                </div>
             </div>
         </div>
-    </div>
-
+        <script src="script.js"></script>
 </body>
 
 </html>
