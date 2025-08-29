@@ -14,20 +14,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="w-[1900px] bg-[#f5fff6] mx-auto">
+<body class="w-full max-w-screen-3xl bg-[#f5fff6] mx-auto">
     <!-- nav bar -->
-    <div class="parent-div justify-between flex w-full h-[100px] px-[60px] py-6 bg-white">
+    <div class="parent-div flex flex-col sm:flex-row justify-between w-full px-4 sm:px-8 pb-4 items-center lg:px-[60px] py-4 sm:py-6 bg-white">
         <div class="flex items-center gap-2"> <img src="assets/logo.png" class="w-[50px] h-[50px]" alt="">
             <h1 class="text-xl text-[#006747] font-extrabold">Emergency <br>Service</h1>
         </div>
         <div class=" flex items-center gap-3">
             <div class="flex bg-[#41ff6b1a] w-[123px] h-[52px] rounded-[50px] items-center justify-center gap-2">
-                <h1 id="heartCount" class="text-lg font-black text-center">0</h1> <img src="assets/heart.png" class="w-[30px] h-[30px]"
-                    alt="">
+                <h1 id="heartCount" class="text-lg font-black text-center">0</h1> <img src="assets/heart.png"
+                    class="w-[30px] h-[30px]" alt="">
             </div>
             <div class="flex bg-[#41ff6b1a] w-[123px] h-[52px] rounded-[50px] items-center justify-center gap-2">
-                <h1 id="coinCount" class="text-lg font-black text-center">100</h1> <img src="assets/coin.png" class="w-[30px] h-[30px]"
-                    alt="">
+                <h1 id="coinCount" class="text-lg font-black text-center">100</h1> <img src="assets/coin.png"
+                    class="w-[30px] h-[30px]" alt="">
             </div>
             <div
                 class="flex bg-[#00a63e] w-[127px] h-[52px] rounded-[50px] px-9 py-3 items-center justify-center gap-2">
@@ -37,19 +37,19 @@
         </div>
     </div>
     <!-- banner -->
-    <div class="w-full h-[239px] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]">
-        <div class="pt-3 flex text-center items-center justify-center">
-            <img src="assets/logo-dark.png" alt="" class="w-[90px] h-[90px]">
+    <div class="w-full bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] py-6 sm:py-10 px-4">
+        <div class="flex justify-center mb-4">
+            <img src="assets/logo-dark.png" alt="" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] lg:w-[90px] lg:h-[90px]">
         </div>
-        <h1 class="text-white text-center text-[40px] font-bold mb-5">Emergency Service Directory</h1>
-        <p class="text-white text-center mt-4">Government Emergency Services at Your Fingertip – A Project by Government
+        <h1 class="text-white text-center text-2xl sm:text-3xl lg:text-[40px] font-bold mb-3">Emergency Service Directory</h1>
+        <p class="text-white text-center text-sm sm:text-base lg:text-lg max-w-3xl mx-auto">Government Emergency Services at Your Fingertip – A Project by Government
             of the People’s Republic of Bangladesh</p>
     </div>
-    <div class="flex gap-3 mt-10">
+    <div class="flex flex-col lg:flex-row gap-6 mt-10">
         <!-- Left side: Cards -->
-        <div class="ml-10 mb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1">
+        <div class="mb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1 justify-items-center">
             <!-- 1st card -->
-            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+            <div class="card w-full sm:w-[350px]  lg:w-[400px] min-h-[350px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
                 <!-- Icon -->
                 <div class="flex justify-between">
                     <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
@@ -79,14 +79,15 @@
                             class="fa-solid fa-copy"></i>
                         Copy
                     </button>
-                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                    <button
+                        class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
                             class="fa-solid fa-phone"></i>
                         Call
                     </button>
                 </div>
             </div>
             <!-- 2nd card -->
-            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+            <div class="card w-full sm:w-[350px]  lg:w-[400px] min-h-[350px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
                 <!-- Icon -->
                 <div class="flex justify-between">
                     <div class="w-[60px] h-[60px] rounded-2xl bg-[#dfefff] flex items-center justify-center">
@@ -116,14 +117,15 @@
                             class="fa-solid fa-copy"></i>
                         Copy
                     </button>
-                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                    <button
+                        class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
                             class="fa-solid fa-phone"></i>
                         Call
                     </button>
                 </div>
             </div>
             <!-- 3rd card -->
-            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+            <div class="card w-full sm:w-[350px]  lg:w-[400px] min-h-[350px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
                 <!-- Icon -->
                 <div class="flex justify-between">
                     <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
@@ -153,14 +155,15 @@
                             class="fa-solid fa-copy"></i>
                         Copy
                     </button>
-                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                    <button
+                        class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
                             class="fa-solid fa-phone"></i>
                         Call
                     </button>
                 </div>
             </div>
             <!-- 4th card -->
-            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+            <div class="card w-full sm:w-[350px]  lg:w-[400px] min-h-[350px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
                 <!-- Icon -->
                 <div class="flex justify-between">
                     <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
@@ -190,14 +193,15 @@
                             class="fa-solid fa-copy"></i>
                         Copy
                     </button>
-                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                    <button
+                        class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
                             class="fa-solid fa-phone"></i>
                         Call
                     </button>
                 </div>
             </div>
             <!-- 5th card -->
-            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+            <div class="card w-full sm:w-[350px]  lg:w-[400px] min-h-[350px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
                 <!-- Icon -->
                 <div class="flex justify-between">
                     <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
@@ -227,14 +231,15 @@
                             class="fa-solid fa-copy"></i>
                         Copy
                     </button>
-                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                    <button
+                        class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
                             class="fa-solid fa-phone"></i>
                         Call
                     </button>
                 </div>
             </div>
             <!-- 6th card -->
-            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+            <div class="card w-full sm:w-[350px]  lg:w-[400px] min-h-[350px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
                 <!-- Icon -->
                 <div class="flex justify-between">
                     <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
@@ -264,14 +269,15 @@
                             class="fa-solid fa-copy"></i>
                         Copy
                     </button>
-                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                    <button
+                        class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
                             class="fa-solid fa-phone"></i>
                         Call
                     </button>
                 </div>
             </div>
             <!-- 7th card -->
-            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+            <div class="card w-full sm:w-[350px]  lg:w-[400px] min-h-[350px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
                 <!-- Icon -->
                 <div class="flex justify-between">
                     <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
@@ -301,14 +307,15 @@
                             class="fa-solid fa-copy"></i>
                         Copy
                     </button>
-                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                    <button
+                        class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
                             class="fa-solid fa-phone"></i>
                         Call
                     </button>
                 </div>
             </div>
             <!-- 8th card -->
-            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+            <div class="card w-full sm:w-[350px]  lg:w-[400px] min-h-[350px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
                 <!-- Icon -->
                 <div class="flex justify-between">
                     <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
@@ -338,14 +345,15 @@
                             class="fa-solid fa-copy"></i>
                         Copy
                     </button>
-                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                    <button
+                        class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
                             class="fa-solid fa-phone"></i>
                         Call
                     </button>
                 </div>
             </div>
             <!-- 9th card -->
-            <div class="card w-[436px] h-[360px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
+            <div class="card w-full sm:w-[350px]  lg:w-[400px] min-h-[350px] bg-white rounded-xl shadow-md pt-8 pl-8 flex flex-col space-y-3 ">
                 <!-- Icon -->
                 <div class="flex justify-between">
                     <div class="w-[60px] h-[60px] rounded-2xl bg-[#ffe3e2] flex items-center justify-center">
@@ -375,7 +383,8 @@
                             class="fa-solid fa-copy"></i>
                         Copy
                     </button>
-                    <button class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
+                    <button
+                        class="callBtn flex-1 bg-green-600 text-white text-base rounded-lg py-2 hover:bg-green-700"><i
                             class="fa-solid fa-phone"></i>
                         Call
                     </button>
@@ -384,7 +393,7 @@
         </div>
 
         <!-- Right side: Call History -->
-        <div class="w-[400px] h-[1115px] bg-white rounded-xl shadow-md p-6 mr-8 flex flex-col">
+        <div class="w-full sm:w-[350px] lg:w-[400px] h-auto bg-white rounded-xl shadow-md p-6 mr-8 flex flex-col">
             <!-- Header -->
             <div class="flex items-center justify-between mb-4">
                 <h2 class="font-normal text-xl text-[#111111]"><i class="fa-regular fa-clock"></i> Call History</h2>
@@ -397,8 +406,22 @@
 
             <!-- Call history list -->
             <div class="flex flex-col space-y-3 overflow-y-auto">
-                <div class="flex justify-between text-sm pb-2">
+                <div class="flex justify-between text-sm border-b pb-2">
+                    <div>
+                        <p class="font-medium">Fire Service Number</p>
+                        <p class="text-gray-500">999</p>
+                    </div>
+                    <span class="text-gray-400">11:36:58 AM</span>
                 </div>
+
+                <div class="flex justify-between text-sm border-b pb-2">
+                    <div>
+                        <p class="font-medium">National Emergency Number</p>
+                        <p class="text-gray-500">1994-999999</p>
+                    </div>
+                    <span class="text-gray-400">11:36:58 AM</span>
+                </div>
+
             </div>
         </div>
         <script src="script.js"></script>
