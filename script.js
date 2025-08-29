@@ -3,18 +3,18 @@
 
 // DOM Elements
 const heartIcons = document.getElementsByClassName("fa-heart");
-const heartCount = document.getElementById("heartCount");   // ❤️ counter
-const coinCount = document.getElementById("coinCount");     // 💰 counter
-const copyCount = document.getElementById("copyCount");     // 📋 counter
-const callHistoryContainer = document.getElementById("callHistory"); // 📞 history box
-const clearBtn = document.getElementById("clearHistory");   // 🗑️ clear button
+const heartCount = document.getElementById("heartCount");
+const coinCount = document.getElementById("coinCount");
+const copyCount = document.getElementById("copyCount");
+const callHistory = document.getElementById("callHistory");
+const clearHistoryBtn = document.getElementById("clearHistory");
 
 // Convert text to number safely
 function getInt(el) {
     return parseInt(el.innerText) || 0;
 }
 
-// ❤️ Increase Heart Count
+//  Increase Heart Count
 for (let i = 0; i < heartIcons.length; i++) {
     heartIcons[i].addEventListener("click", function () {
         heartCount.innerText = getInt(heartCount) + 1;
@@ -25,19 +25,16 @@ for (let i = 0; i < heartIcons.length; i++) {
 const callButtons = document.getElementsByClassName("callBtn");
 
 // Loop through all call buttons
+// Loop through all call buttons
 for (let i = 0; i < callButtons.length; i++) {
     callButtons[i].addEventListener("click", function () {
-        // Find the card (parent div of button)
         const card = this.closest(".card");
 
-        // Service details
         const serviceName = card.querySelector(".service-name").innerText;
         const serviceNumber = card.querySelector(".service-number").innerText;
 
-        // Current coins
         let coins = parseInt(coinCount.innerText) || 0;
 
-        // Check if enough coins
         if (coins < 20) {
             alert("Not enough coins to make a call! (20 coins required)");
             return;
@@ -50,13 +47,24 @@ for (let i = 0; i < callButtons.length; i++) {
         // Show alert
         alert(`Calling ${serviceName} at ${serviceNumber}`);
 
-        // Add to Call History
-        const historyItem = document.createElement("div");
-        historyItem.className = "history-item";
-        historyItem.innerText = `${serviceName} - ${serviceNumber}`;
-        callHistoryContainer.appendChild(historyItem);
+        // ✅ Add to Call History here
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+
+        const entry = document.createElement("div");
+        entry.className = "flex justify-between text-sm border-b pb-2";
+        entry.innerHTML = `
+            <div>
+                <p class="font-medium">${serviceName}</p>
+                <p class="text-gray-500">${serviceNumber}</p>
+            </div>
+            <span class="text-gray-400">${timeString}</span>
+        `;
+
+        callHistory.prepend(entry);
     });
 }
+
 
 
 
@@ -87,4 +95,7 @@ for (let i = 0; i < copyButtons.length; i++) {
             });
     });
 }
-
+// Clear history
+clearHistoryBtn.addEventListener("click", function () {
+    callHistory.innerHTML = "";
+});
